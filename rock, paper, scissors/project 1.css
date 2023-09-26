@@ -1,0 +1,50 @@
+body{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    margin: 0 auto;
+    height: 25rem;
+    width: 50rem;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: bisque;
+}
+
+.container .buttons{
+    width: 500px;
+    margin-bottom: 4rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+button{
+    height: 5rem;
+    width: 10rem;
+    background-color: yellowgreen;
+    font-size: 2rem;
+}
+
+#result{
+    background-color: white;
+    height: 3rem;
+    width: 500px;
+    display: flex;
+    align-self: center;
+    position: absolute;
+    top: 15rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: rgb(70, 70, 70);
+}
