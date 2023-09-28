@@ -1,0 +1,116 @@
+:root{
+    --body_bg: rgb(22, 22, 105);
+    --opc_bg: rgb(106, 106, 245);
+    --opc_hover_bg: rgb(187, 187, 238);
+    --btn_bg: rgb(122, 122, 211);
+    --shadow-box: rgb(37, 37, 107);
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body_bg);
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: burlywood;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 6rem;
+    margin: auto;
+    position: relative;
+    top: 6rem;
+    background-color: var(--shadow-box);
+    border-radius: 2px;
+}
+.container{
+    display: flex;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    position: relative;
+    top: 15rem;
+    
+}
+
+.opciones{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--opc_bg);
+    justify-content: space-around;
+    position: relative;
+    left: 25rem;
+    border-radius: 3px;
+    border: 1.2rem solid var(--shadow-box);
+    width: 20rem;
+}
+
+.btn{
+    height: 5rem;
+    border-radius: 5px;
+    background-color: var(--btn_bg);
+}
+
+.btn:hover{
+    background-color: var(--opc_hover_bg);
+}
+
+.slideContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.slide-bar{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 99%;
+    height: 1.5rem;
+    background-color: var(--opc_hover_bg);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slide-bar:hover {
+    opacity: 1;
+  }
+
+.slide-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--btn_bg);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.gridSize{
+    font-size: 2rem;
+    background-color: var(--opc_hover_bg);
+    border-radius: 5px;
+    color: rgb(83, 91, 99);
+    position: absolute;
+    bottom: 4.5rem;
+    right: 7.5rem;
+
+}
+
+
+.grid{
+    border: 1rem solid black;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    margin: auto;
+    
+}
