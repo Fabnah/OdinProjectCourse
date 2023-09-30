@@ -16,6 +16,7 @@ body{
     background-color: var(--body_bg);
     margin: 0;
     padding: 0;
+    
 }
 
 h1{
@@ -34,7 +35,7 @@ h1{
     height: 95%;
     margin: auto;
     position: relative;
-    top: 15rem;
+    top: 13rem;
     
 }
 
@@ -43,6 +44,7 @@ h1{
     flex-direction: column;
     background-color: var(--opc_bg);
     justify-content: space-around;
+    align-items: center;
     position: relative;
     left: 25rem;
     border-radius: 3px;
@@ -52,9 +54,27 @@ h1{
 
 .btn{
     height: 5rem;
+    width: 19rem;
     border-radius: 5px;
     background-color: var(--btn_bg);
 }
+
+input[type="color"]{
+    width: 7em;
+    height: 7em;
+    border: none;
+    appearance: none;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.color-btn::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+
+
 
 .btn:hover{
     background-color: var(--opc_hover_bg);
@@ -108,9 +128,13 @@ h1{
 
 .grid{
     border: 1rem solid black;
-    width: fit-content;
-    height: fit-content;
+    width: 50rem;
+    height: 50rem;
     border-radius: 5px;
     margin: auto;
-    
+    display: grid;
+    position: relative;
+    left: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(1fr, 1fr));
 }
