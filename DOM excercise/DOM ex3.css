@@ -6,13 +6,17 @@
     --shadow-box: rgb(37, 37, 107);
 }
 
+*{
+    margin: 0;
+}
+
 html{
+    position: relative;
+    min-height: 100%;
     font-size: 10px;
 }
 
 body{
-    display: flex;
-    flex-direction: column;
     background-color: var(--body_bg);
     margin: 0;
     padding: 0;
@@ -23,41 +27,42 @@ h1{
     color: burlywood;
     font-family: 'Courier New', Courier, monospace;
     font-size: 6vw;
-    margin: auto;
-    position: relative;
-    top: 6rem;
+    text-align: center;
     background-color: var(--shadow-box);
     border-radius: 2px;
+    margin-bottom: 3rem;
 }
 .container{
     display: flex;
-    width: 95%;
-    height: 95%;
-    margin: auto;
-    position: relative;
-    top: 13rem;
-    
+    align-items: center;
+    justify-content: flex-start;
+    gap: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .opciones{
-    display: flex;
-    flex-direction: column;
     background-color: var(--opc_bg);
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    left: 25rem;
     border-radius: 3px;
     border: 1.2rem solid var(--shadow-box);
-    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 200px;
 }
 
 .btn{
     height: 5rem;
-    width: 19rem;
+    width: 16rem;
     border-radius: 5px;
     background-color: var(--btn_bg);
     font-size: 1vw;
+}
+
+.erase-btn, .clean-btn{
+    font-size: 2vw;
 }
 
 input[type="color"]{
@@ -93,6 +98,7 @@ input[type="color"]{
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    margin-bottom: 20px;
 }
 
 .slide-bar:hover {
@@ -114,10 +120,7 @@ input[type="color"]{
     background-color: var(--opc_hover_bg);
     border-radius: 5px;
     color: rgb(83, 91, 99);
-    position: absolute;
-    bottom: 4.5rem;
-    right: 7.5rem;
-
+    margin-bottom: -20px;
 }
 
 
@@ -126,12 +129,53 @@ input[type="color"]{
     width: 50rem;
     height: 50rem;
     border-radius: 5px;
-    margin: auto;
     display: grid;
-    position: relative;
-    left: 2rem;
     grid-template-columns: repeat(auto-fill, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
 }
 
 
+@media (max-width: 1200px) {
+    .container {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 850px) {
+    .container {
+      gap: 50px;
+    }
+  
+    .opciones {
+      width: 150px;
+      gap: 16px;
+    }
+  
+    .gridSize {
+      margin-bottom: -4px;
+    }
+  
+    .grid {
+      width: 400px;
+      height: 400px;
+    }
+
+    .btn{
+        width: 9rem;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .h1 {
+      font-size: 50px;
+    }
+  
+    .container {
+      flex-direction: column-reverse;
+    }
+  
+    .grid {
+      width: 300px;
+      height: 300px;
+    }
+  }

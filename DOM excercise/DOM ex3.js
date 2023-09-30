@@ -48,10 +48,16 @@ function createGrid(size) {
 
 //funcion para colorear los divs al inicio (va dentro de createGrid)
 function colorDivs(divs) {
+    document.body.onmousedown = () => (mousedown = true)
+    document.body.onmouseup = () => (mousedown = false)
+
     divs.addEventListener("mouseenter", function () {
         this.style.backgroundColor = color.value;
-      });
-}
+            
+        }); 
+    }
+
+
 
 //funcion que actualiza el valor del grid llamando a la funcion createGrid
 function realTimeBar() {
@@ -85,6 +91,7 @@ function eraseBtn() {
         });
       });
 }
+
 
 
 //llamadas a las funciones
